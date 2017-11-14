@@ -17,20 +17,16 @@ VirtualBox
 
 **Usage**
 
-Install Vagrant And VirtualBox
- Clone this repository
+Install Vagrant And VirtualBox.
  
- Download or Clone <a href ="https://github.com/udacity/fullstack-nanodegree-vm">fullstack-nanodegree-vm</a> repository.
+ 
+Download or Clone <a href ="https://github.com/udacity/fullstack-nanodegree-vm">fullstack-nanodegree-vm</a> repository.
 
-Launch Vagrant VM by running vagrant up, you can the log in with vagrant ssh
+Launch Vagrant VM by running **vagrant up**, you can the log in with **vagrant ssh**
 
 Download the <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip">data</a> from here.
 
-To load the data, use the command psql -d news -f newsdata.sql to connect a database and run the necessary SQL statements.
+To load the data, use the command **psql -d news -f newsdata.sql** to connect a database and run the necessary SQL statements.
 
-The database includes three tables:
 
-Authors table
-Articles table
-Log table
-To execute the program, run python3 get-news-data.py from the command line.
+To execute the program, run **python3 get-news-data.py** from the command line.

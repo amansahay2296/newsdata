@@ -26,33 +26,30 @@ q3_query = (
              "status like '%404%' group by date) as inner_query "
              "group by date order by errpercent desc) as outer_query "
              "where errpercent >1 ")
-             
 try:
-    db = psycopg2.connect(database = dbname)
-    
+    db = psycopg2.connect(database=dbname)
     c = db.cursor()
     print(q1)
     c.execute(q1_query)
     print("Executed Query 1")
     result1 = c.fetchall()
     for i in range(len(result1)):
-        print(result1[i][0],"\t",str(result1[i][1])," views")
+        print(result1[i][0], "\t", str(result1[i][1]), " views")
     print(q2)
     c.execute(q2_query)
     print("Executed Query 2")
     result2 = c.fetchall()
     for i in range(len(result2)):
-        print(result2[i][0],"\t",str(result2[i][1])," views")
+        print(result2[i][0], "\t", str(result2[i][1]), " views")
 
     print(q3)
     c.execute(q3_query)
     print("Executed Query 3")
     result3 = c.fetchall()
     for i in range(len(result3)):
-        print(str(result3[i][0]),"\t",str(result3[i][1])," % errors") 
+        print(str(result3[i][0]), "\t", str(result3[i][1]), " % errors")
         
     db.close()
     
 except Exception as e:
     print (e)
-    
