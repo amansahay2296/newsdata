@@ -41,15 +41,12 @@ try:
     result2 = c.fetchall()
     for i in range(len(result2)):
         print(result2[i][0], "\t", str(result2[i][1]), " views")
-
     print(q3)
     c.execute(q3_query)
     print("Executed Query 3")
     result3 = c.fetchall()
     for i in range(len(result3)):
         print(str(result3[i][0]), "\t", str(result3[i][1]), " % error")
-        
     db.close()
-    
 except Exception as e:
     print (e)
